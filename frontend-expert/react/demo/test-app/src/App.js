@@ -1,52 +1,85 @@
-import React from "react";
-import "./App.css";
-import { useReducer } from "react";
-
-function reducer(state, action) {
-    switch (action.type) {
-        case 'increment':
-            return {count: state.count + action.num};
-        case 'decrement': 
-            return {count: state.count - action.num}
-        default:
-            throw new Error('Unknown action type')
-    }
-}
+import { forwardRef, useRef } from "react";
 
 export default function App() {
-  const [state, dispatch] = useReducer(reducer, {
-    count: 0
-  });
 
   return (
     <>
-      <Counter 
-      count={state.count} 
-      onClick={() => dispatch({
-        type: 'increment',
-        num: 1
-      })}/>
-
-       <Counter 
-      count={state.count} 
-      onClick={() => dispatch({
-        type: 'decremesnt',
-        num: 10
-      })}/>
+      <MyInput ref={handleRef}/>
+      {/* <button onClick={focusInput}>Focus</button> */}
     </>
   );
 }
 
-function Counter({count, onClick}) {
-  return (
-    <>
-      <button onClick={onClick}>
-        Increment
-        </button>
-      <p>Count: {count}</p>
-    </>
-  );
+function handleRef(domNode) { 
+    console.log(domNode);
 }
+
+const MyInput = forwardRef(function (props, ref) {
+    return <input ref={ref} {...props} style={{color: 'red'}} />
+});
+
+// Mount {initial render} - added for the first time
+// updates {re-render}
+// Unmount {remove}
+
+// export default function App() {
+//   const [isShown, setIsShown] = useState(true);
+
+//   return (
+//     <>
+//       <button onClick={() => setIsShown(!isShown)}>
+//         {isShown ? "Hide Counter" : "Show Counter"}
+//       </button>
+//       {isShown ? <Counter /> : null}
+//     </>
+//   );
+// }
+
+// function reducer(state, action) {
+//     switch (action.type) {
+//         case 'increment':
+//             return {count: state.count + action.num};
+//         case 'decrement':
+//             return {count: state.count - action.num}
+//         default:
+//             throw new Error('Unknown action type')
+//     }
+// }
+
+// export default function App() {
+//   const [state, dispatch] = useReducer(reducer, {
+//     count: 0
+//   });
+
+//   return (
+//     <>
+//       <Counter
+//       count={state.count}
+//       onClick={() => dispatch({
+//         type: 'increment',
+//         num: 1
+//       })}/>
+
+//        <Counter
+//       count={state.count}
+//       onClick={() => dispatch({
+//         type: 'decrement',
+//         num: 10
+//       })}/>
+//     </>
+//   );
+// }
+
+// function Counter({count, onClick}) {
+//   return (
+//     <>
+//       <button onClick={onClick}>
+//         Increment
+//         </button>
+//       <p>Count: {count}</p>
+//     </>
+//   );
+// }
 
 // export default function App() {
 //   return (

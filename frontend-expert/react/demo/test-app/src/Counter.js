@@ -1,34 +1,56 @@
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useState, forwardRef, useImperativeHandle } from "react";
 
+export default forwardRef(function Counter(props, ref) {
+  const [count, setCount] = useState(0);
 
-export default function Counter() {
-    const [count, setCount] = useState(0);
-    const [bool, setBool] = useState(false);
+  useImperativeHandle(ref, () => {
+    return {
+        reset: () => setCount(0)
+    };
+  });
 
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <p>Count: {count}</p>
+    </>
+  );
+});
 
-    // useEffect -> run after render, update but not unmounting
+// UseEffect
+// UseEffect
+// UseEffect
+// UseEffect
+// UseEffect
 
-    useLayoutEffect(() => {
-        if ( count === 3) {
-            setCount(4);
-        }
-    }, [count])
+// import { useState, useEffect, useLayoutEffect } from 'react';
 
-    useEffect(() => {
-        console.log('render');
-    })
+// export default function Counter() {
+//     const [count, setCount] = useState(0);
+//     const [bool, setBool] = useState(false);
 
-    const startTime = new Date();
-    while (new Date() - startTime < 100) { 
+//     // useEffect -> run after render, update but not unmounting
 
-    }
+//     useLayoutEffect(() => {
+//         if ( count === 3) {
+//             setCount(4);
+//         }
+//     }, [count])
 
-    return (
-        <div className='counter'>
-            <button onClick={() => setBool(!bool)}>Re-render</button>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <p>Count: {count}</p>
-        </div>
-    )
-}
+//     useEffect(() => {
+//         console.log('render');
+//     })
 
+//     const startTime = new Date();
+//     while (new Date() - startTime < 100) {
+
+//     }
+
+//     return (
+//         <div className='counter'>
+//             <button onClick={() => setBool(!bool)}>Re-render</button>
+//             <button onClick={() => setCount(count + 1)}>Increment</button>
+//             <p>Count: {count}</p>
+//         </div>
+//     )
+// }

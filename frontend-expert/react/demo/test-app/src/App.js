@@ -1,31 +1,35 @@
 import { useState } from "react";
-import { Profiles } from './Profiles'
-const conner = {
-    name: 'Conner',
-    course: 'FrontendExpert'
+import Profile from "./Profiles";
+import { UserContext } from "./UserContext";
+
+const Clement = {
+  name: "Clement",
+  course: "AlgoExpert",
 };
 
-const clement = {
-    name: 'Clement',
-    course: 'AlgoExpert'
+const connor = {
+  name: "Connor",
+  course: "FrontendEpxert",
 };
 
+export default function App() {
+  const [user, setUser] = useState(conner);
 
-export default function App(){
-    const [user, setUser] = useState(conner);
-
-    const toggleUser = () => {
-        if (user === conner) {
-            setUser(clement);
-        } else {
-            setUser(conner);
-        }
+  const toggleUser = () => {
+    if (user === conner) {
+      setUser(clement);
+    } else {
+      setUser(conner);
     }
+  };
+  
+  return (
+    <main>
+        <UserContext.Provider value={user}>
+        <Profile />
 
-    return (
-        <main>
-            <Profiles user={user}/>
-            <button onClick={toggleUser}>Toggle User</button>
-        </main>
-    );
+        </UserContext.Provider>
+        <button onClick={toggleUser}>Toggle Users</button>
+    </main>
+  )
 }

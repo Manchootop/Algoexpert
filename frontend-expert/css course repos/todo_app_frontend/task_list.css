@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+* {
+    box-sizing: content-box;
+}
+
+body {
+    /* background-color: rgb(245, 147, 147);
+     */
+    background-color: lightcoral;
+}
+
+main {
+    max-width: 550px;
+    margin: auto;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    border-radius: 0.5em;
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 15px 15px 15px 5px;
+    background-image: linear-gradient(to right, #f06d6d, #fa4646), linear-gradient(to left, #ffcccc, #ff6666);
+    color: white;
+    border-radius: 0.5em;
+}
+
+
+#header-logout {
+    text-decoration: none;
+    color: white;
+    align-self: flex-end;
+    margin-bottom: -25px;
+    margin-top: -10px;
+}
+
+#incompleted-tasks {
+    display: inline-block;
+    flex-direction: column;
+    margin-bottom: -5px;
+    margin-top: -1px;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+        "search " "search" "button" "create"
+        "status" ". " "title" "action"
+    ;
+}
+
+section form {
+    padding: 20px 0 20px 5px;
+    border-bottom: 0.1em solid white;
+}
+
+form input {
+    height: 1.8em;
+    margin-right: -3px;
+    padding: 3px;
+    border: 1px solid #fa4646;
+    border-radius: 0.2em;
+}
+
+form input.button {
+    color: #fa4646;
+    background-color: white;
+}
+
+form a img {
+    width: 2em;
+}

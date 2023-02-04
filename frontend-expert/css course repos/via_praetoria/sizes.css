@@ -1,0 +1,28 @@
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+
+main {
+    font-size: 1.5em;
+}
+
+footer {
+    font-size: 1em;
+}
+
+
+.intro-text {
+    font-size: 1.5em;
+    /* 1.5 times the size of the default font */
+}
+
+#event-title {
+    font-size: 2em;
+    /* 2 times the size of the default font */
+}

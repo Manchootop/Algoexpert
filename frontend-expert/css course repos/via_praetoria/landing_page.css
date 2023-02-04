@@ -1,0 +1,123 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    background-image: url("main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #a1a19e;
+    background-color: #F5F5DC;
+}
+
+#main-image-text {
+    color: white;
+}
+
+#main-image-text h1 {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+.bg-image {
+    background-image: url("main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    box-shadow: 0px 15px 20px #6c6c6c;
+} */
+
+
+/* header {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 0;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+header {
+    background-color: #F5F5DC;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Playfair Display', serif;
+    color: #8B8782;
+    font-size: 1.2em;
+
+}
+
+section {
+    margin: 0;
+    padding: 20px;
+}
+
+footer {
+    background-color: #F5F5DC;
+    color: #8B8782;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    background-image: url('image-url.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a:hover {
+    color: #00008B;
+    text-decoration: underline;
+} */

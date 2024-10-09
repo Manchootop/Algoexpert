@@ -19,6 +19,6 @@ Task:
     given no coins, the minimum amount of change that you can't create is 1,
 '''
 
-# print(non_constructible_change([5, 7, 1, 1, 2, 3, 22]))
+print(non_constructible_change([5, 7, 1, 1, 2, 3, 22]))
 # print(non_constructible_change([1]))
 # print(non_constructible_change([1, 5, 1, 1, 1, 10, 15, 20, 100]))
